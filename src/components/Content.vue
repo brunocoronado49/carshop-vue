@@ -64,8 +64,8 @@
                             <tbody>
                                 <tr v-for="(product, index) in products" :key="product.id">
                                     <td>
-                                        <span v-if="formUpdate && idupdate == index">
-                                            <div class="form-gro">
+                                        <span v-if="formUpdate && idUpdate == index">
+                                            <div class="form-group">
                                                 <input
                                                     type="text"
                                                     class="form-control"
@@ -78,8 +78,8 @@
                                         </span>
                                     </td>
                                     <td>
-                                        <span v-if="formUpdate && idupdate == index">
-                                            <div class="form-gro">
+                                        <span v-if="formUpdate && idUpdate == index">
+                                            <div class="form-group">
                                                 <input 
                                                     type="text"
                                                     class="form-control"
@@ -92,8 +92,8 @@
                                         </span>
                                     </td>
                                     <td>
-                                        <span v-if="formUpdate && idupdate == index">
-                                            <div class="form-gro">
+                                        <span v-if="formUpdate && idUpdate == index">
+                                            <div class="form-group">
                                                 <input 
                                                     type="text"
                                                     class="form-control"
@@ -181,12 +181,11 @@ export default {
         },
 
         editProduct(product) {
-            this.id = product
+            this.idUpdate = product
             this.newName = this.products[product].name
             this.newAmount = this.products[product].amount
             this.newUnitPrice = this.products[product].unitPrice
-
-            this.formUpdate = true
+            this.formUpdate = true;
         },
 
         updateProduct(product) {
