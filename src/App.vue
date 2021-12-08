@@ -1,15 +1,25 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <img alt="Store logo" src="./assets/descarga.png" width="150" height="150">
+    <br><br>
+    <Title title="Store"/>
+    <Credits author="José Francisco Rangel Coronado"/>
+    <hr/>
+    <Content/>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Title from './components/Title.vue'
+import Credits from './components/Credits.vue'
+import Content from './components/Content.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Title,
+    Credits,
+    Content
   }
 }
 </script>
@@ -22,5 +32,13 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+body {
+  background: #f1f2f6;
+}
+
+h1, h2, h3, h4, p {
+  font-weight: bold;
 }
 </style>
